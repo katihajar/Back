@@ -1,4 +1,4 @@
-package com.example.GestionDesStagiaire.entities.DTO;
+package com.example.GestionDesStagiaire.dtos;
 
 import com.example.GestionDesStagiaire.entities.User;
 

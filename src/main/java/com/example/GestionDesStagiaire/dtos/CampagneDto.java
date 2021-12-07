@@ -1,4 +1,4 @@
-package com.example.GestionDesStagiaire.entities.DTO;
+package com.example.GestionDesStagiaire.dtos;
 
 import com.example.GestionDesStagiaire.entities.Candidat;
 import com.example.GestionDesStagiaire.entities.Critere;
@@ -26,10 +26,10 @@ public class CampagneDto implements Serializable {
     private int seuil;
 
 
-    private List<Candidat> candidats;
+    private List<Candidat> candidatsDto;
 
 
-    private List<Critere> criteres;
+    private List<Critere> criteresDto;
 
     public int getIdCampagne() {
         return idCampagne;
@@ -80,18 +80,18 @@ public class CampagneDto implements Serializable {
     }
 
     public List<Candidat> getCandidats() {
-        return candidats;
+        return candidatsDto;
     }
 
     public void setCandidats(List<Candidat> candidats) {
-        this.candidats = candidats;
+        this.candidatsDto = candidats;
     }
 
     public List<Critere> getCriteres() {
-        return criteres;
+        return criteresDto;
     }
 
     public void setCriteres(List<Critere> criteres) {
-        this.criteres = criteres;
+        this.criteresDto = criteres;
     }
 }
