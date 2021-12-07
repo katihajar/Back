@@ -27,7 +27,7 @@ public class CritereDao implements Serializable {
     private int poids;
 
 
-    private Campagne campagne;
+    private CampagneDao campagne;
 
 
     private List<CandidatResponseCritere> candidatResponseCriteres;
@@ -80,11 +80,11 @@ public class CritereDao implements Serializable {
         this.poids = poids;
     }
 
-    public Campagne getCampagne() {
+    public CampagneDao getCampagne() {
         return campagne;
     }
 
-    public void setCampagne(Campagne campagne) {
+    public void setCampagne(CampagneDao campagne) {
         this.campagne = campagne;
     }
 

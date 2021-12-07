@@ -1,7 +1,6 @@
 package com.example.GestionDesStagiaire.dao;
 
-import com.example.GestionDesStagiaire.entities.Candidat;
-import com.example.GestionDesStagiaire.entities.Critere;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -30,10 +29,10 @@ public class CampagneDao implements Serializable {
     private int seuil;
 
 
-    private List<Candidat> candidats;
+    private List<CandidatDao> candidats;
 
 
-    private List<Critere> criteres;
+    private List<CritereDao> criteres;
 
     public int getIdCampagne() {
         return idCampagne;
@@ -83,19 +82,19 @@ public class CampagneDao implements Serializable {
         this.seuil = seuil;
     }
 
-    public List<Candidat> getCandidats() {
+    public List<CandidatDao> getCandidats() {
         return candidats;
     }
 
-    public void setCandidats(List<Candidat> candidats) {
+    public void setCandidats(List<CandidatDao> candidats) {
         this.candidats = candidats;
     }
 
-    public List<Critere> getCriteres() {
+    public List<CritereDao> getCriteres() {
         return criteres;
     }
 
-    public void setCriteres(List<Critere> criteres) {
+    public void setCriteres(List<CritereDao> criteres) {
         this.criteres = criteres;
     }
 }

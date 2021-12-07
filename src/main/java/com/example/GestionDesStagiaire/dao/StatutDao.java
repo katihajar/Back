@@ -17,7 +17,7 @@ public class StatutDao implements Serializable {
     private String valeur;
 
 
-    private List<Candidat> candidats;
+    private List<CandidatDao> candidats;
 
 
     public int getIdStatut() {
@@ -36,11 +36,11 @@ public class StatutDao implements Serializable {
         this.valeur = valeur;
     }
 
-    public List<Candidat> getCandidats() {
+    public List<CandidatDao> getCandidats() {
         return candidats;
     }
 
-    public void setCandidats(List<Candidat> candidats) {
+    public void setCandidats(List<CandidatDao> candidats) {
         this.candidats = candidats;
     }
 }

@@ -19,7 +19,7 @@ public class UserDao implements Serializable {
     private String emailUser;
 
 
-    private Profile profile;
+    private ProfileDao profile;
 
     public int getIdUser() {
         return idUser;
@@ -53,11 +53,11 @@ public class UserDao implements Serializable {
         this.emailUser = emailUser;
     }
 
-    public Profile getProfile() {
+    public ProfileDao getProfile() {
         return profile;
     }
 
-    public void setProfile(Profile profile) {
+    public void setProfile(ProfileDao profile) {
         this.profile = profile;
     }
 }

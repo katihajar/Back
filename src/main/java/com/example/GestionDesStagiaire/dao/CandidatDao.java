@@ -51,13 +51,13 @@ public class CandidatDao implements Serializable {
     private String IsCreatedBy;
 
 
-    private Campagne campagne;
+    private CampagneDao campagne;
 
 
     private List<CandidatResponseCritere> candidatResponseCriteres;
 
 
-    private Statut statut;
+    private StatutDao statut;
 
     public int getIdCandidat() {
         return idCandidat;
@@ -163,15 +163,15 @@ public class CandidatDao implements Serializable {
         IsCreatedBy = isCreatedBy;
     }
 
-    public Campagne getCampagne() {
+    public CampagneDao getCampagne() {
         return campagne;
     }
 
-    public void setCampagne(Campagne campagne) {
+    public void setCampagne(CampagneDao campagne) {
         this.campagne = campagne;
     }
 
-    public List<CandidatResponseCritere> getCandidatResponseCriteres() {
+   public List<CandidatResponseCritere> getCandidatResponseCriteres() {
         return candidatResponseCriteres;
     }
 
@@ -179,11 +179,11 @@ public class CandidatDao implements Serializable {
         this.candidatResponseCriteres = candidatResponseCriteres;
     }
 
-    public Statut getStatut() {
+    public StatutDao getStatut() {
         return statut;
     }
 
-    public void setStatut(Statut statut) {
+    public void setStatut(StatutDao statut) {
         this.statut = statut;
     }
 }

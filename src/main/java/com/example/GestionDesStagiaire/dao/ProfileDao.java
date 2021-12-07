@@ -15,7 +15,7 @@ public class ProfileDao implements Serializable {
     private String role;
 
 
-    private List<User> users;
+    private List<UserDao> users;
 
     public int getIdProfile() {
         return idProfile;
@@ -33,11 +33,11 @@ public class ProfileDao implements Serializable {
         this.role = role;
     }
 
-    public List<User> getUsers() {
+    public List<UserDao> getUsers() {
         return users;
     }
 
-    public void setUsers(List<User> users) {
+    public void setUsers(List<UserDao> users) {
         this.users = users;
     }
 }
