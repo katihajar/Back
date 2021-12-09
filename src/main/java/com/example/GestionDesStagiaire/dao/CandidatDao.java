@@ -54,7 +54,7 @@ public class CandidatDao implements Serializable {
     private CampagneDao campagne;
 
 
-    private List<CandidatResponseCritere> candidatResponseCriteres;
+    private List<CandidatResponseCritereDao> candidatResponseCriteres;
 
 
     private StatutDao statut;
@@ -171,11 +171,11 @@ public class CandidatDao implements Serializable {
         this.campagne = campagne;
     }
 
-   public List<CandidatResponseCritere> getCandidatResponseCriteres() {
+   public List<CandidatResponseCritereDao> getCandidatResponseCriteres() {
         return candidatResponseCriteres;
     }
 
-    public void setCandidatResponseCriteres(List<CandidatResponseCritere> candidatResponseCriteres) {
+    public void setCandidatResponseCriteres(List<CandidatResponseCritereDao> candidatResponseCriteres) {
         this.candidatResponseCriteres = candidatResponseCriteres;
     }
 
