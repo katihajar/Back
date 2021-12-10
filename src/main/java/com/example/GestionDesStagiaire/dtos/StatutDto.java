@@ -1,23 +1,16 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.dtos;
 
-import com.example.GestionDesStagiaire.entities.Candidat;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-public class StatutDao implements Serializable {
-
-
+public class StatutDto implements Serializable {
 
 
     private int idStatut;
 
-
     private String valeur;
 
-
-    private List<CandidatDao> candidats;
+    private List<CandidatDto> candidats;
 
 
     public int getIdStatut() {
@@ -36,11 +29,11 @@ public class StatutDao implements Serializable {
         this.valeur = valeur;
     }
 
-    public List<CandidatDao> getCandidats() {
+    public List<CandidatDto> getCandidats() {
         return candidats;
     }
 
-    public void setCandidats(List<CandidatDao> candidats) {
+    public void setCandidats(List<CandidatDto> candidats) {
         this.candidats = candidats;
     }
 }

@@ -1,10 +1,5 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.daos;
 
-import com.example.GestionDesStagiaire.entities.Campagne;
-import com.example.GestionDesStagiaire.entities.CandidatResponseCritere;
-import com.example.GestionDesStagiaire.entities.Statut;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 

@@ -1,36 +1,27 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.daos;
 
 
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 public class CampagneDao implements Serializable {
 
-
-
     private int idCampagne;
-
 
     private String nomCampagne;
 
-
     private String description;
-
 
     private Date dateDebut;
 
-
     private Date dateFin;
-
 
     private int seuil;
 
 
     private List<CandidatDao> candidats;
-
 
     private List<CritereDao> criteres;
 

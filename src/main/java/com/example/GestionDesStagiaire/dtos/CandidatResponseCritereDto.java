@@ -1,12 +1,9 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.dtos;
 
-import com.example.GestionDesStagiaire.entities.Candidat;
-import com.example.GestionDesStagiaire.entities.Critere;
 import com.example.GestionDesStagiaire.entities.custom_keys.candidatResponseCritereKey;
 
 
-
-public class CandidatResponseCritereDao {
+public class CandidatResponseCritereDto {
 
 
     private candidatResponseCritereKey idCandidatRespCritere;
@@ -14,10 +11,10 @@ public class CandidatResponseCritereDao {
 
     private String response;
 
-    private CritereDao critere;
+    private CritereDto critere;
 
 
-    private CandidatDao candidat;
+    private CandidatDto candidat;
 
 
     public candidatResponseCritereKey getIdCandidatRespCritere() {
@@ -36,19 +33,19 @@ public class CandidatResponseCritereDao {
         this.response = response;
     }
 
-    public CritereDao getCritere() {
+    public CritereDto getCritere() {
         return critere;
     }
 
-    public void setCritere(CritereDao critere) {
+    public void setCritere(CritereDto critere) {
         this.critere = critere;
     }
 
-    public CandidatDao getCandidat() {
+    public CandidatDto getCandidat() {
         return candidat;
     }
 
-    public void setCandidat(CandidatDao candidat) {
+    public void setCandidat(CandidatDto candidat) {
         this.candidat = candidat;
     }
 }

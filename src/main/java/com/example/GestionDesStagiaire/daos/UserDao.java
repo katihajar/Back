@@ -1,8 +1,5 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.daos;
 
-import com.example.GestionDesStagiaire.entities.Profile;
-
-import javax.persistence.*;
 import java.io.Serializable;
 
 public class UserDao implements Serializable {

@@ -1,21 +1,16 @@
-package com.example.GestionDesStagiaire.dao;
+package com.example.GestionDesStagiaire.dtos;
 
-import com.example.GestionDesStagiaire.entities.User;
-
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-public class ProfileDao implements Serializable {
+public class ProfileDto implements Serializable {
 
 
     private int idProfile;
 
-
     private String role;
 
-
-    private List<UserDao> users;
+    private List<UserDto> users;
 
     public int getIdProfile() {
         return idProfile;
@@ -33,11 +28,11 @@ public class ProfileDao implements Serializable {
         this.role = role;
     }
 
-    public List<UserDao> getUsers() {
+    public List<UserDto> getUsers() {
         return users;
     }
 
-    public void setUsers(List<UserDao> users) {
+    public void setUsers(List<UserDto> users) {
         this.users = users;
     }
 }
