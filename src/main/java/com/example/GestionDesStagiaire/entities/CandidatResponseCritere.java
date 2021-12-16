@@ -1,6 +1,8 @@
 package com.example.GestionDesStagiaire.entities;
 
 import com.example.GestionDesStagiaire.entities.custom_keys.candidatResponseCritereKey;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,10 +19,12 @@ public class CandidatResponseCritere implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="idCritere", nullable=false, insertable = false, updatable = false)
+    @JsonManagedReference
     private Critere critere;
 
     @ManyToOne
     @JoinColumn(name="idCandidat", nullable= false, insertable = false, updatable = false)
+    @JsonBackReference
     private Candidat candidat;
 
     public CandidatResponseCritere() {   }

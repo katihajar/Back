@@ -2,6 +2,8 @@ package com.example.GestionDesStagiaire.daos;
 
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -20,9 +22,10 @@ public class CampagneDao implements Serializable {
 
     private int seuil;
 
-
+    @JsonManagedReference
     private List<CandidatDao> candidats;
 
+    @JsonManagedReference
     private List<CritereDao> criteres;
 
     public int getIdCampagne() {

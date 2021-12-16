@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.daos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,6 +12,7 @@ public class StatutDao implements Serializable {
 
     private String valeur;
 
+    @JsonBackReference
     private List<CandidatDao> candidats;
 
 

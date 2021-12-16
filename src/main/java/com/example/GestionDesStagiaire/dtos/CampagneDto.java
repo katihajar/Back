@@ -2,6 +2,8 @@ package com.example.GestionDesStagiaire.dtos;
 
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -25,10 +27,10 @@ public class CampagneDto implements Serializable {
 
     private int seuil;
 
-
+    @JsonManagedReference
     private List<CandidatDto> candidats;
 
-
+    @JsonManagedReference
     private List<CritereDto> criteres;
 
     public int getIdCampagne() {

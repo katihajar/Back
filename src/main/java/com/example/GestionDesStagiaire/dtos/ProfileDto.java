@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.dtos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,6 +12,7 @@ public class ProfileDto implements Serializable {
 
     private String role;
 
+    @JsonBackReference
     private List<UserDto> users;
 
     public int getIdProfile() {

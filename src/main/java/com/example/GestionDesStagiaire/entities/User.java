@@ -1,6 +1,8 @@
 package com.example.GestionDesStagiaire.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -24,6 +26,7 @@ public class User implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="idProfile", nullable=false)
+    @JsonManagedReference
     private Profile profile;
 
     public User() {    }

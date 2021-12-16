@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -30,9 +32,11 @@ public class Campagne implements Serializable {
     private int seuil;
 
     @OneToMany(mappedBy = "campagne")
+    @JsonManagedReference
     private List<Candidat> candidats;
 
     @OneToMany(mappedBy = "campagne")
+    @JsonManagedReference
     private List<Critere> criteres;
 
     public Campagne() {}

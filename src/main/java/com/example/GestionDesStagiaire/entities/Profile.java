@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -17,6 +19,7 @@ public class Profile implements Serializable {
     private String role;
 
     @OneToMany(mappedBy = "profile")
+    @JsonBackReference
     private List<User> users;
 
     public Profile() {  }

@@ -1,5 +1,8 @@
 package com.example.GestionDesStagiaire.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -51,13 +54,16 @@ public class Candidat implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="idCampagne", nullable=false)
+    @JsonBackReference
     private Campagne campagne;
 
     @OneToMany(mappedBy = "candidat")
+    @JsonManagedReference
     private List<CandidatResponseCritere> candidatResponseCriteres;
 
     @ManyToOne
     @JoinColumn(name="idStatut", nullable=false)
+    @JsonManagedReference
     private Statut statut;
 
     public Candidat() {  }

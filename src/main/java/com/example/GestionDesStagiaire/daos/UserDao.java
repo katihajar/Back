@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.daos;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 
 public class UserDao implements Serializable {
@@ -15,7 +17,7 @@ public class UserDao implements Serializable {
 
     private String emailUser;
 
-
+    @JsonManagedReference
     private ProfileDao profile;
 
     public int getIdUser() {

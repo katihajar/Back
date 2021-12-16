@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.daos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -22,10 +24,10 @@ public class CritereDao implements Serializable {
 
     private int poids;
 
-
+    @JsonBackReference
     private CampagneDao campagne;
 
-
+    @JsonBackReference
     private List<CandidatResponseCritereDao> candidatResponseCriteres;
 
     public int getIdCritere() {

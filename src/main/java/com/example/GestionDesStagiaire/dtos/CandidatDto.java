@@ -1,5 +1,8 @@
 package com.example.GestionDesStagiaire.dtos;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -45,12 +48,13 @@ public class CandidatDto implements Serializable {
 
     private String IsCreatedBy;
 
-
+    @JsonBackReference
     private CampagneDto campagne;
 
-
+    @JsonManagedReference
     private List<CandidatResponseCritereDto> candidatResponseCriteres;
 
+    @JsonManagedReference
     private StatutDto statut;
 
     public int getIdCandidat() {

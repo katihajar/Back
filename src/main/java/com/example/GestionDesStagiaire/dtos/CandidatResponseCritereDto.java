@@ -1,6 +1,8 @@
 package com.example.GestionDesStagiaire.dtos;
 
 import com.example.GestionDesStagiaire.entities.custom_keys.candidatResponseCritereKey;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 public class CandidatResponseCritereDto {
@@ -11,11 +13,11 @@ public class CandidatResponseCritereDto {
 
     private String response;
 
+    @JsonManagedReference
     private CritereDto critere;
 
-
+    @JsonBackReference
     private CandidatDto candidat;
-
 
     public candidatResponseCritereKey getIdCandidatRespCritere() {
         return idCandidatRespCritere;

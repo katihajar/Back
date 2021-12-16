@@ -1,5 +1,7 @@
 package com.example.GestionDesStagiaire.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -17,6 +19,7 @@ public class Statut implements Serializable {
     private String valeur;
 
     @OneToMany(mappedBy = "statut")
+    @JsonBackReference
     private List<Candidat> candidats;
 
     public Statut() { }
