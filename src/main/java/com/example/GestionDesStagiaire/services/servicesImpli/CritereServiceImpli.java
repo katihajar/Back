@@ -8,6 +8,7 @@ import com.example.GestionDesStagiaire.entities.Critere;
 import com.example.GestionDesStagiaire.repositories.CritereRepository;
 import com.example.GestionDesStagiaire.services.CritereService;
 import com.example.GestionDesStagiaire.utils.ObjectMapperUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,11 +18,12 @@ import java.util.Optional;
 
 @Service
 public class CritereServiceImpli implements CritereService {
+    @Autowired
     CritereRepository critereRepository ;
 
 
     @Override
-    public List<CritereDao> getAllCriteres(int page, int limit) {
+    public List<CritereDao> getAllCriteres() {
         List<CritereDao> CritereDaos=new ArrayList<>();
         List<Critere> Criteres = critereRepository.findAll();
         if (Criteres != null) {
@@ -37,7 +39,7 @@ public class CritereServiceImpli implements CritereService {
     }
 
     @Override
-    public CritereDao getCritere(String idf) {
+    public CritereDao getCritere(int idf) {
         Optional<Critere> critere = critereRepository.findById(idf);
 
         if (critere.isEmpty())
@@ -47,7 +49,7 @@ public class CritereServiceImpli implements CritereService {
     }
 
     @Override
-    public CritereDao updateCritere(String idf, CritereDao criterePresDao) {
+    public CritereDao updateCritere(int idf, CritereDao criterePresDao) {
         if (!critereRepository.existsById(idf))
             return null;
         Critere savedCritere = critereRepository.save(ObjectMapperUtils.map(criterePresDao, Critere.class));

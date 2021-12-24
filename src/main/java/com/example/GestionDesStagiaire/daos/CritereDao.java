@@ -24,10 +24,8 @@ public class CritereDao implements Serializable {
 
     private int poids;
 
-    @JsonBackReference
     private CampagneDao campagne;
 
-    @JsonBackReference
     private List<CandidatResponseCritereDao> candidatResponseCriteres;
 
     public int getIdCritere() {

@@ -8,8 +8,8 @@ import com.example.GestionDesStagiaire.dtos.CritereDto;
 import com.example.GestionDesStagiaire.services.CampagneService;
 import com.example.GestionDesStagiaire.services.CritereService;
 import com.example.GestionDesStagiaire.utils.ObjectMapperUtils;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +30,10 @@ public class CritereController {
 
     // API get All Criteres
     @GetMapping
-    public List<CritereDto> getAllCriteres(@RequestParam(value = "page", defaultValue = "1") int page,
-                                             @RequestParam(value = "limit", defaultValue = "10") int limit ){
+    public List<CritereDto> getAllCriteres(){
 
         List<CritereDto> critereDtos=new ArrayList<>();
-        List<CritereDao> critereDaos=critereService.getAllCriteres(page,limit);
+        List<CritereDao> critereDaos=critereService.getAllCriteres();
         if (critereDaos!=null){
             critereDtos= ObjectMapperUtils.mapAll(critereDaos,CritereDto.class);
         }

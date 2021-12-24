@@ -7,12 +7,12 @@ import java.util.List;
 public interface CampagneService {
 
 
-    List<CampagneDao> getAllCampagnes(int page , int limit);
+    List<CampagneDao> getAllCampagnes();
 
     CampagneDao createCampagne(CampagneDao campagneDao);
 
-    public CampagneDao getCampagne(String idf);
+    public CampagneDao getCampagne(int idf);
 
-    CampagneDao updateCampagne(String idf, CampagneDao campagneDao);
+    CampagneDao updateCampagne(int idf, CampagneDao campagneDao);
 
 }

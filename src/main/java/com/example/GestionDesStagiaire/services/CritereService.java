@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface CritereService {
 
-    List<CritereDao> getAllCriteres(int page , int limit);
+    List<CritereDao> getAllCriteres();
 
     CritereDao createCritere(CritereDao critereDao);
 
-    public CritereDao getCritere(String idf);
+    public CritereDao getCritere(int idf);
 
-    CritereDao updateCritere(String idf, CritereDao critereDao);
+    CritereDao updateCritere(int idf, CritereDao critereDao);
 }

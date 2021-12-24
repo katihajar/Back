@@ -5,8 +5,8 @@ import com.example.GestionDesStagiaire.daos.CampagneDao;
 import com.example.GestionDesStagiaire.dtos.CampagneDto;
 import com.example.GestionDesStagiaire.services.CampagneService;
 import com.example.GestionDesStagiaire.utils.ObjectMapperUtils;
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,11 +30,10 @@ public class CampagneController {
 
     // API get All Campagnes
     @GetMapping
-    public List<CampagneDto> getAllCampagnes(@RequestParam(value = "page", defaultValue = "1") int page,
-                                             @RequestParam(value = "limit", defaultValue = "10") int limit ){
+    public List<CampagneDto> getAllCampagnes( ){
 
         List<CampagneDto> campagneDtos=new ArrayList<>();
-        List<CampagneDao> campagneDaos=campagneService.getAllCampagnes(page,limit);
+        List<CampagneDao> campagneDaos=campagneService.getAllCampagnes();
         if (campagneDaos!=null){
             campagneDtos= ObjectMapperUtils.mapAll(campagneDaos,CampagneDto.class);
         }
