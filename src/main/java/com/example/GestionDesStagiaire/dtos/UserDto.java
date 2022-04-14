@@ -1,6 +1,7 @@
 package com.example.GestionDesStagiaire.dtos;
 
-import com.example.GestionDesStagiaire.entities.Profile;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import java.io.Serializable;
 
@@ -8,17 +9,15 @@ public class UserDto implements Serializable {
 
     private int idUser;
 
-
     private String nomUser;
-
 
     private String prenomUser;
 
-
     private String emailUser;
 
-
-    private Profile profile;
+    @JsonManagedReference
+    @JsonIgnore
+    private ProfileDto profile;
 
     public int getIdUser() {
         return idUser;
@@ -52,11 +51,15 @@ public class UserDto implements Serializable {
         this.emailUser = emailUser;
     }
 
-    public Profile getProfile() {
+    public ProfileDto getProfile() {
         return profile;
     }
 
-    public void setProfile(Profile profile) {
+    public void setProfile(ProfileDto profile) {
         this.profile = profile;
     }
+
+    public UserDto() { }
+
+
 }

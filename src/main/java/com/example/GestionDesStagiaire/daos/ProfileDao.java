@@ -1,6 +1,7 @@
 package com.example.GestionDesStagiaire.daos;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,6 +15,7 @@ public class ProfileDao implements Serializable {
     private String role;
 
     @JsonBackReference
+    @JsonIgnore
     private List<UserDao> users;
 
     public int getIdProfile() {
@@ -39,4 +41,7 @@ public class ProfileDao implements Serializable {
     public void setUsers(List<UserDao> users) {
         this.users = users;
     }
+
+    public ProfileDao() { }
+
 }

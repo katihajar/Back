@@ -38,4 +38,8 @@ public class ProfileDto implements Serializable {
     public void setUsers(List<UserDto> users) {
         this.users = users;
     }
+
+    public ProfileDto() {  }
+
+
 }

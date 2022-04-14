@@ -59,4 +59,7 @@ public class UserDao implements Serializable {
     public void setProfile(ProfileDao profile) {
         this.profile = profile;
     }
+
+    public UserDao() {  }
+
 }
