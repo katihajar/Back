@@ -1,19 +1,19 @@
 package com.example.GestionDesStagiaire.dtos;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.example.GestionDesStagiaire.entities.Candidat;
 
 import java.io.Serializable;
 import java.util.List;
 
 public class StatutDto implements Serializable {
 
-
     private int idStatut;
+
 
     private String valeur;
 
-    @JsonBackReference
-    private List<CandidatDto> candidats;
+
+    private List<Candidat> candidats;
 
 
     public int getIdStatut() {
@@ -32,11 +32,11 @@ public class StatutDto implements Serializable {
         this.valeur = valeur;
     }
 
-    public List<CandidatDto> getCandidats() {
+    public List<Candidat> getCandidats() {
         return candidats;
     }
 
-    public void setCandidats(List<CandidatDto> candidats) {
+    public void setCandidats(List<Candidat> candidats) {
         this.candidats = candidats;
     }
 }

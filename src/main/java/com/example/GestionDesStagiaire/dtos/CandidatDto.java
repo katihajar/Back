@@ -1,14 +1,13 @@
 package com.example.GestionDesStagiaire.dtos;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.example.GestionDesStagiaire.entities.Campagne;
+import com.example.GestionDesStagiaire.entities.CandidatResponseCritere;
+import com.example.GestionDesStagiaire.entities.Statut;
 
 import java.io.Serializable;
 import java.util.List;
 
 public class CandidatDto implements Serializable {
-
-
 
     private int idCandidat;
 
@@ -48,14 +47,14 @@ public class CandidatDto implements Serializable {
 
     private String IsCreatedBy;
 
-    @JsonBackReference
-    private CampagneDto campagne;
 
-    @JsonManagedReference
-    private List<CandidatResponseCritereDto> candidatResponseCriteres;
+    private Campagne campagne;
 
-    @JsonManagedReference
-    private StatutDto statut;
+
+    private List<CandidatResponseCritere> candidatResponseCriteres;
+
+
+    private Statut statut;
 
     public int getIdCandidat() {
         return idCandidat;
@@ -161,27 +160,27 @@ public class CandidatDto implements Serializable {
         IsCreatedBy = isCreatedBy;
     }
 
-    public CampagneDto getCampagne() {
+    public Campagne getCampagne() {
         return campagne;
     }
 
-    public void setCampagne(CampagneDto campagne) {
+    public void setCampagne(Campagne campagne) {
         this.campagne = campagne;
     }
 
-   public List<CandidatResponseCritereDto> getCandidatResponseCriteres() {
+    public List<CandidatResponseCritere> getCandidatResponseCriteres() {
         return candidatResponseCriteres;
     }
 
-    public void setCandidatResponseCriteres(List<CandidatResponseCritereDto> candidatResponseCriteres) {
+    public void setCandidatResponseCriteres(List<CandidatResponseCritere> candidatResponseCriteres) {
         this.candidatResponseCriteres = candidatResponseCriteres;
     }
 
-    public StatutDto getStatut() {
+    public Statut getStatut() {
         return statut;
     }
 
-    public void setStatut(StatutDto statut) {
+    public void setStatut(Statut statut) {
         this.statut = statut;
     }
 }

@@ -1,15 +1,13 @@
 package com.example.GestionDesStagiaire.dtos;
 
-
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.example.GestionDesStagiaire.entities.Candidat;
+import com.example.GestionDesStagiaire.entities.Critere;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 public class CampagneDto implements Serializable {
-
     private int idCampagne;
 
 
@@ -27,11 +25,11 @@ public class CampagneDto implements Serializable {
 
     private int seuil;
 
-    @JsonManagedReference
-    private List<CandidatDto> candidats;
 
-    @JsonManagedReference
-    private List<CritereDto> criteres;
+    private List<Candidat> candidatsDto;
+
+
+    private List<Critere> criteresDto;
 
     public int getIdCampagne() {
         return idCampagne;
@@ -81,19 +79,19 @@ public class CampagneDto implements Serializable {
         this.seuil = seuil;
     }
 
-    public List<CandidatDto> getCandidats() {
-        return candidats;
+    public List<Candidat> getCandidats() {
+        return candidatsDto;
     }
 
-    public void setCandidats(List<CandidatDto> candidats) {
-        this.candidats = candidats;
+    public void setCandidats(List<Candidat> candidats) {
+        this.candidatsDto = candidats;
     }
 
-    public List<CritereDto> getCriteres() {
-        return criteres;
+    public List<Critere> getCriteres() {
+        return criteresDto;
     }
 
-    public void setCriteres(List<CritereDto> criteres) {
-        this.criteres = criteres;
+    public void setCriteres(List<Critere> criteres) {
+        this.criteresDto = criteres;
     }
 }

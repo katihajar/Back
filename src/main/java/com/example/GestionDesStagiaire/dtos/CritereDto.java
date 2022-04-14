@@ -1,7 +1,7 @@
 package com.example.GestionDesStagiaire.dtos;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.example.GestionDesStagiaire.entities.Campagne;
+import com.example.GestionDesStagiaire.entities.CandidatResponseCritere;
 
 import java.io.Serializable;
 import java.util.List;
@@ -22,13 +22,14 @@ public class CritereDto implements Serializable {
 
     private boolean actif;
 
+
     private int poids;
 
-    @JsonBackReference
-    private CampagneDto campagne;
 
-    @JsonBackReference
-    private List<CandidatResponseCritereDto> candidatResponseCriteres;
+    private Campagne campagne;
+
+
+    private List<CandidatResponseCritere> candidatResponseCriteres;
 
     public int getIdCritere() {
         return idCritere;
@@ -78,19 +79,19 @@ public class CritereDto implements Serializable {
         this.poids = poids;
     }
 
-    public CampagneDto getCampagne() {
+    public Campagne getCampagne() {
         return campagne;
     }
 
-    public void setCampagne(CampagneDto campagne) {
+    public void setCampagne(Campagne campagne) {
         this.campagne = campagne;
     }
 
-    public List<CandidatResponseCritereDto> getCandidatResponseCriteres() {
+    public List<CandidatResponseCritere> getCandidatResponseCriteres() {
         return candidatResponseCriteres;
     }
 
-    public void setCandidatResponseCriteres(List<CandidatResponseCritereDto> candidatResponseCriteres) {
+    public void setCandidatResponseCriteres(List<CandidatResponseCritere> candidatResponseCriteres) {
         this.candidatResponseCriteres = candidatResponseCriteres;
     }
 }
